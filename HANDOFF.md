@@ -36,6 +36,77 @@ Paste this whole file into a new Claude session. It has everything needed to con
   - 20 Reporting, 21 Settings, 22 Merchant Area
 - **Status doc:** "Horizon | ONE – Phase 1 & 2 Status", https://claude.ai/code/artifact/50082a4f-6fff-4c33-a9be-a501a4bfc0eb
 
+### Source document (ask the user to attach it again in the new chat)
+- **"Horizon | ONE UX-Designkonzept für die Softwareoberfläche V1.0"**: the client's UX concept doc, written in German. "§" means section number.
+- Every screen note cites it, for example "Based on: UX §31 Orders · §32".
+- **§75, Phase 1:** the 10 reference screens:
+  1. Horizon Dashboard
+  2. Merchant Overview
+  3. Merchant 360°
+  4. Product Overview
+  5. Product 360°
+  6. Merchant Offers & Inventory
+  7. Order Overview
+  8. Order 360°
+  9. Exception Center
+  10. Merchant Dashboard
+- **§76, Phase 2:**
+  - Pricing (§26–27), Sales Channels (§29–30), Fulfillment (§38–39), Returns (§43–44)
+  - Settlement (§45–46), Product Matching, Master Content (§21–22), Inventory (§25)
+  - Reporting (§48), Settings and Roles (§58, §76)
+  - Merchant Area: Products, Orders, Settlement (§52–56)
+- **Customers (§47, §80)** is in neither phase. It is built and marked "TO CONFIRM".
+- **Other sections used:**
+  - §13: Merchant 360° tabs
+  - §61: side panels
+  - §63: structure of a 360° view
+  - §69: search and filter
+  - §77: exception states for important areas
+- The original doc file is not in the repo. **The user must re-attach the PDF/DOCX** if detailed requirements are needed.
+
+### Screen and flow inventory: English page (the German page is identical; 89 screens each)
+| # | Area | Screens | Frames |
+|---|---|---|---|
+| 01 | Horizon Dashboard | 3 | Default, Exception, Empty |
+| 02 | Merchant Overview | 3 | Default, Exception, Empty |
+| 03 | Merchant 360° | 12 | Default, Exception, Empty/Onboarding, plus tabs Products & Offers, Orders & Fulfillment, Settlement, Performance, Integrations, History, Inventory, Returns, Settings |
+| 04 | Product Overview | 4 | Default, Merchant-sources popover, Empty, Exception |
+| 05 | Product 360° | 18 | Default, Overview, Overview with product flow, Merchant Products, Offers, Inventory, Data Quality, Activity, Loading, Empty, Exception (sync alert), Master Content, Pricing, Variants, Channels, Orders, Returns, History |
+| 06 | Merchant Offers & Inventory | 3 | Default, Exception, Empty |
+| 07 | Order Overview | 4 | Default, Multi-merchant popover, Empty, Exception |
+| 08 | Order 360° | 10 | Default, Routing & Allocation, Change Merchant panel, Items, Activity, Exception, Fulfillment, Shipment, Returns, Settlement |
+| 09 | Exception Center | 4 | Default, Detail side panel, Bulk actions, Empty |
+| 10 | Merchant Dashboard | 4 | Default, Detail panel, Exception, Empty |
+| 11 | Pricing (P2) | 2 | List, Price Calculation panel |
+| 12 | Sales Channels (P2) | 2 | List, Channel 360° (Zalando DE) |
+| 13 | Fulfillment (P2) | 2 | Queue, Add Tracking panel |
+| 14 | Returns (P2) | 2 | List, Return 360° (RET-20413) |
+| 15 | Settlement (P2) | 2 | List, Settlement 360° (Apex Electronics) |
+| 16 | Product Matching (P2) | 2 | Queue, Compare & Confirm panel |
+| 17 | Master Content (P2) | 2 | Content sources, Select Content Source panel |
+| 18 | Customers (to confirm) | 2 | List, Customer 360° (Jia Chan) |
+| 19 | Inventory (P2) | 1 | List (rows open Product 360° Inventory tab) |
+| 20 | Reporting (P2) | 3 | Management, Operations, Finance |
+| 21 | Settings (P2) | 1 | Users & Roles (tabs: General, Users & Roles, Routing Rules, Pricing Rules, Integrations, Notifications) |
+| 22 | Merchant Area (P2) | 3 | Merchant Products, Merchant Orders, Merchant Settlement |
+
+**Totals:**
+- Phase 1: 65 screens. Phase 2: 24 screens. Together: 89 screens on each page, 178 across both pages.
+- **18 flows on each page:**
+  - 01 Dashboard, 02 Merchants, 03 Products, 04 Orders, 05 Exception Center, 06 Merchant Area
+  - 11 Pricing, 12 Sales Channels, 13 Fulfillment, 14 Returns, 15 Settlement, 16 Product Matching
+  - 17 Master Content, 18 Customers, 19 Inventory, 20 Reporting, 21 Settings, 22 Merchant Area (Phase 2)
+- Every screen has a "Note / Screen" below it (Why, What, Benefit, Concept §, Based on §). Every section has a "Note / Section" (click-through and open points).
+
+### Known gaps / possible next work (Horizon ONE)
+- **Phase 2 is designed at "key screen" depth: list plus one detail or panel.**
+  - The 360° drawers for 12.2, 14.2, 15.2 and 18.2 have only the Overview tab designed; their other tabs have no screens.
+  - Settings has only Users & Roles (other tabs not designed).
+  - Inventory and Settings have no empty or exception states.
+- **Phase 2 has no empty or exception states.** Phase 1 has them for every area.
+- **Customers needs client confirmation** (it is in neither phase).
+- **Activity (05.7) and History (05.18)** overlap in content.
+
 ### Shell components
 - **Navbar:** component set `1:7861` (Variation=First and Variation=two).
   - Header height is **64px**.
@@ -119,6 +190,7 @@ Paste this whole file into a new Claude session. It has everything needed to con
 ## 3. Communication Tool (Visticle): file `zCEigbJArmI0UANlxMoT5Q`
 - **Pages:** Information Architecture, Structure, Components, UI Screens English, UI Screens German.
 - **Status:** done. This covers the sidebar merge, Resolved tab, AI tone/suggestions, Delivery Note CTA and PDF popup, notes, Stage 1 doc review and German translation.
+- **Source docs:** two eSales "Stage 1" PDFs that the user shared earlier. They are not in the repo; the user must re-attach them if needed. The Stage 1 doc review is published at https://claude.ai/code/artifact/46d5baed-3a61-41ca-9b7e-ca04668c92f1.
 - The user asked about an **"Article Management"** feature for Visticle. There is no record of it in this session. Ask for the file or link.
 
 ## Repo
